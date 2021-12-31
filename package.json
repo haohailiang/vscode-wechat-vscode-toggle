@@ -1,0 +1,63 @@
+{
+    "name": "wechat-vscode-toggle",
+    "displayName": "wechat devtools and vscode ide toggle",
+    "description": "微信开发者工具和VSCode快速切换的辅助工具",
+    "version": "0.0.1",
+    "publisher": "haohailiang",
+    "author": {
+        "name": "haohailiang",
+        "email": "646263409@qq.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/haohailiang/vscode-wechat-vscode-toggle.git"
+    },
+    "homepage": "https://github.com/haohailiang/vscode-wechat-vscode-toggle/blob/master/README.md",
+    "bugs": {
+        "url": "https://github.com/haohailiang/vscode-wechat-vscode-toggle/issues"
+    },
+    "icon": "res/icon.jpeg",
+    "keywords": [
+        "debug"
+    ],
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:wechat-vscode-toggle.recordInfo"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "wechat-vscode-toggle.recordInfo",
+                "title": "记录当前的文件和行"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "wechat-vscode-toggle.recordInfo",
+                "key": "ctrl+alt+b",
+                "mac": "ctrl+shift+option+["
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.32",
+        "@types/node": "^6.0.40",
+        "mocha": "^2.3.3",
+        "typescript": "^3.5.1",
+        "vscode": "^1.0.0"
+    },
+    "dependencies": {
+        "copy-paste": "^1.3.0"
+    }
+}
